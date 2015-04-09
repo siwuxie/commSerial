@@ -9,9 +9,10 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-    Tserial *comunicator = new Tserial("/dev/ttyUSB0", 115200);
-    comunicator->openPort();
-    test *t = new test();
-    Tserial::connect(comunicator, SIGNAL(dataTransition(QByteArray&)), t, SLOT(getdata(QByteArray&)));
+    test *t= new test();
+    serialThread *comunicator = \
+            new serialThread("/dev/ttyUSB0", 115200, t);
+
+    comunicator->start();
     return a.exec();
 }

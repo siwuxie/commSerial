@@ -8,9 +8,10 @@ class test: public QObject
 public:
     test();
     ~test();
-
+signals:
+    void datasend(QByteArray &data);
 public slots:
-    void getdata(QByteArray &data);
+    void readData(QByteArray &data);
 };
 
 #endif // TEST_H

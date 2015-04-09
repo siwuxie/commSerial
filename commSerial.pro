@@ -7,7 +7,7 @@
 QT       += core
 
 QT       -= gui
-
+QT       += serialport
 TARGET = commSerial
 CONFIG   += console
 CONFIG   -= app_bundle

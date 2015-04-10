@@ -13,7 +13,7 @@ test::~test()
 
 }
 
-void test::readData(QByteArray &data)
+void test::readData(QByteArray data)
 {
     cout<<data.toStdString()<<endl;
 }

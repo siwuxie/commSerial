@@ -22,10 +22,8 @@ signals:
     void dataTransition(QByteArray data);
 
 public slots:
-    void dataSend(QByteArray data);
-
-private slots:
     void readData();
+    void dataSend(QByteArray data);
 };
 
 /*
